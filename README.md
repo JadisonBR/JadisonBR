@@ -1,144 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Funcionários</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>EXEMPLO 05 - BOOTSTRAP</title>
+<style>
+    .painel {
+  font-weight: bold;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border-radius: 10px;
+}
+
+.painel2 {
+  font-weight: bold;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+</style>
 </head>
 <body>
-
-    <main class="container">
-        <header class="cabecalho">
-            <div class="icone">👥</div>
-            <h1>Cadastro de Funcionários</h1>
-            <p>Preencha os dados para cadastrar um novo funcionário.</p>
-        </header>
-
-        <form id="formFuncionario">
-
-            <h2>Dados pessoais</h2>
-
-            <div class="campo">
-                <label for="nome">Nome completo *</label>
-                <input type="text" id="nome" name="nome"
-                       placeholder="Digite o nome completo" required>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info painel2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Estácio Brasilia DF</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cadastrar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Pessoa</a></li>
+                            <li><a class="dropdown-item" href="#">Cursos</a></li>
+                            <li><a class="dropdown-item" href="#">Professores</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                
             </div>
-
-            <div class="linha">
-                <div class="campo">
-                    <label for="cpf">CPF *</label>
-                    <input type="text" id="cpf" name="cpf"
-                           placeholder="000.000.000-00"
-                           maxlength="14" required>
+        </div>
+    </nav>
+    
+    <div class="container pt-5">
+        <div class="card painel">
+            <div class="card-header bg-info">
+                CADASTRO DE FUNCIONÁRIO
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control" name="txtCPF" id="txtCPF">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cpf">Nome</label>
+                        <input type="text" class="form-control" name="txtNome" id="txtNome">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="dataNascimento">Data de Nascimento</label>
+                        <input type="date" class="form-control" name="txtDataNascimento" id="txtDataNascimento">
+                    </div>
                 </div>
-
-                <div class="campo">
-                    <label for="nascimento">Data de nascimento *</label>
-                    <input type="date" id="nascimento"
-                           name="nascimento" required>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nomeMae">Nome da Mãe</label>
+                        <input type="text" class="form-control" name="txtNomeMae" id="txtNomeMae">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="NomePai">Nome do Pai</label>
+                        <input type="text" class="form-control" name="txtNomePai" id="txtNomePai">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="">Área de Atuação</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Selecione Uma Opção</option>
+                            <option value="1">Desenvolvimento Full Stack</option>
+                            <option value="2">Desenvolvimento Front-End</option>
+                            <option value="3">Desenvolvimento Back-End</option>
+                            <option value="4">Segurança da Informação</option>
+                            <option value="5">Requisitos</option>
+                            <option value="6">Infraestrutura</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <label for="">E-mail</label>
+                        <input type="text" class="form-control" name="txtEmail" id="txtEmail">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="">Salário</label>
+                        <input type="text" class="form-control" name="txtSalario" id="txtSalario">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="">Observação</label>
+                    <input type="text" class="form-control" name="txtObs" id="txtObs">
                 </div>
             </div>
-
-            <div class="linha">
-                <div class="campo">
-                    <label for="email">E-mail *</label>
-                    <input type="email" id="email" name="email"
-                           placeholder="funcionario@email.com" required>
-                </div>
-
-                <div class="campo">
-                    <label for="telefone">Telefone *</label>
-                    <input type="tel" id="telefone" name="telefone"
-                           placeholder="(00) 00000-0000" required>
-                </div>
-            </div>
-
-            <h2>Dados profissionais</h2>
-
-            <div class="linha">
-                <div class="campo">
-                    <label for="cargo">Cargo *</label>
-                    <input type="text" id="cargo" name="cargo"
-                           placeholder="Ex.: Assistente administrativo"
-                           required>
-                </div>
-
-                <div class="campo">
-                    <label for="departamento">Departamento *</label>
-                    <select id="departamento" name="departamento" required>
-                        <option value="">Selecione</option>
-                        <option>Administrativo</option>
-                        <option>Recursos Humanos</option>
-                        <option>Financeiro</option>
-                        <option>Tecnologia da Informação</option>
-                        <option>Comercial</option>
-                        <option>Marketing</option>
-                        <option>Operacional</option>
-                    </select>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-outline-info form-control active">Salvar</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-outline-info form-control">Limpar</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-outline-info form-control">Excluir</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-outline-info form-control">Sair</button>
+                    </div>
                 </div>
             </div>
-
-            <div class="linha">
-                <div class="campo">
-                    <label for="admissao">Data de admissão *</label>
-                    <input type="date" id="admissao"
-                           name="admissao" required>
-                </div>
-
-                <div class="campo">
-                    <label for="salario">Salário (R$) *</label>
-                    <input type="number" id="salario" name="salario"
-                           placeholder="Ex.: 2500.00"
-                           min="0" step="0.01" required>
-                </div>
-            </div>
-
-            <div class="campo">
-                <label for="status">Status do funcionário *</label>
-                <select id="status" name="status" required>
-                    <option value="Ativo">Ativo</option>
-                    <option value="Em experiência">Em experiência</option>
-                    <option value="Afastado">Afastado</option>
-                </select>
-            </div>
-
-            <div class="botoes">
-                <button type="reset" class="btn-limpar">
-                    Limpar
-                </button>
-                <button type="submit" class="btn-cadastrar">
-                    Cadastrar funcionário
-                </button>
-            </div>
-
-            <p id="mensagem" role="status" aria-live="polite"></p>
-        </form>
-
-        <section class="resultado">
-            <h2>Funcionários cadastrados</h2>
-            <p id="contador">Total de funcionários: 0</p>
-            <div class="tabela-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Cargo</th>
-                            <th>Departamento</th>
-                            <th>Status</th>
-                            <th>Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody id="listaFuncionarios"></tbody>
-                </table>
-            </div>
-        </section>
-
-        <footer>
-            Sistema de Cadastro de Funcionários
-        </footer>
-    </main>
-
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
 </body>
 </html>
